@@ -4,8 +4,5 @@ $conf = preg_replace('/\s+/', '', file_get_contents ('/var/www/html/token.txt'))
 if ($pass == $conf) {
     $data = file_get_contents ('/var/www/html/config.json');
     echo $data;
-} else {
-    echo "pass: [$pass] <br>";
-    echo "config: [$conf]";
 }
 ?>
