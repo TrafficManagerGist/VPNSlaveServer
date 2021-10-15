@@ -1,6 +1,6 @@
-# sudo wget https://github.com/TrafficManagerGist/VPNSlaveServer -P /var/www/html/ && sudo sh setupEnvironment.sh
-
 #!/bin/bash
+wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/serverSetup.sh -P /var/www/html/
+wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/index.php -P /var/www/html/
 apt update
 apt install apache2
 sudo apt install php libapache2-mod-php php-mysql
