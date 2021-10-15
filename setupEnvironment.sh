@@ -2,8 +2,8 @@
 wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/serverSetup.sh -P /var/www/html/
 wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/index.php -P /var/www/html/
 
-sudo apt-get install pwgen
 sudo apt-get update
+sudo apt-get install pwgen
 sudo apt-get install apache2
 sudo apt-get install cron
 sudo apt-get install php libapache2-mod-php php-mysql
