@@ -562,7 +562,7 @@ start_services() {
 }
 
 show_vpn_info() {
-echo "{'ip': $public_ip, 'username': $VPN_USER, 'pass': $VPN_PASSWORD, 'psk': $VPN_IPSEC_PSK}" > /var/www/html/config.json
+echo "{'ip': '$public_ip', 'username': '$VPN_USER', 'pass': '$VPN_PASSWORD', 'psk': '$VPN_IPSEC_PSK'}" > /var/www/html/config.json
 
 cat <<EOF
 ================================================
