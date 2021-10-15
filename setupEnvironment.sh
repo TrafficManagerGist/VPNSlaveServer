@@ -2,7 +2,8 @@
 wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/serverSetup.sh -P /var/www/html/
 wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/index.php -P /var/www/html/
 
-token = openssl rand -base64 14
+sudo chmod 777 /var/www/html -R
+token=$(sudo openssl rand -base64 14)
 sudo echo $token > /var/www/html/token.txt
 
 sudo apt-get update
