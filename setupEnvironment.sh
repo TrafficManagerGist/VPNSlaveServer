@@ -2,8 +2,9 @@
 wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/serverSetup.sh -P /var/www/html/
 wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/index.php -P /var/www/html/
 
+sudo apt-get install pwgen
 sudo chmod 777 /var/www/html -R
-token=$(sudo openssl rand -base64 14)
+token=$(pwgen 30 1)
 sudo echo $token > /var/www/html/token.txt
 
 sudo apt-get update
