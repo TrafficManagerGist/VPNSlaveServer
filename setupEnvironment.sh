@@ -3,14 +3,14 @@ wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/se
 wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/index.php -P /var/www/html/
 
 sudo apt-get install pwgen
-sudo chmod 777 /var/www/html -R
-token=$(pwgen 30 1)
-sudo echo $token > /var/www/html/token.txt
-
 sudo apt-get update
 sudo apt-get install apache2
 sudo apt-get install cron
 sudo apt-get install php libapache2-mod-php php-mysql
+
+sudo chmod 777 /var/www/html -R
+token=$(pwgen 30 1)
+sudo echo $token > /var/www/html/token.txt
 
 crontab -l > crontab_new 
 echo "0 0 * * * /var/www/html/serverSetup.sh" >> crontab_new
