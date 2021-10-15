@@ -4,13 +4,7 @@ wget https://raw.githubusercontent.com/TrafficManagerGist/VPNSlaveServer/main/in
 apt update
 apt install apache2
 sudo apt install php libapache2-mod-php php-mysql
-crontab -l > mycron
-#echo new cron into cron file
-echo "0 0 * * * echo 'iosDev123' | sudo sh /var/www/html/serverSetup.sh" >> mycron
-#install new cron file
-crontab mycron
-rm mycron
-
+sudo crontab -e 0 0 * * * echo 'iosDev123' | sudo sh /var/www/html/serverSetup.sh
 sh /var/www/html/serverSetup.sh
 
 sudo systemctl reload apache2

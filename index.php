@@ -1,13 +1,6 @@
 <?php
-$data = file_get_contents ('/var/www/html/config.json');
-$json = json_decode($data, true);
-foreach ($json as $key => $value) {
-    if (!is_array($value)) {
-        echo $key . '=>' . $value . '<br/>';
-    } else {
-        foreach ($value as $key => $val) {
-            echo $key . '=>' . $val . '<br/>';
-        }
-    }
+if ($_GET["password"] == "lz9zsh6823tbuhsf7b0235zsd0sevd7") {
+    $data = file_get_contents ('/var/www/html/config.json');
+    echo $data;
 }
 ?>
