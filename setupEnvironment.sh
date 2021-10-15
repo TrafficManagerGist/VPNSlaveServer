@@ -7,6 +7,7 @@ sudo echo $token > /var/www/html/token.txt
 
 apt update
 apt install apache2
+sudo apt-get install cron
 sudo apt install php libapache2-mod-php php-mysql
 sudo crontab -l | { cat; echo "0 0 * * * echo '$1' | sudo sh /var/www/html/serverSetup.sh"; } | crontab -
 sudo sh /var/www/html/serverSetup.sh
